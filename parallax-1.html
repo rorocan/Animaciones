@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            margin: 0;
+        }
+        .parallex-container {
+            width: 100%;
+            height: 100vh;
+            perspective: 8px;
+            perspective-origin: 50%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: relative;
+        }
+        
+        .image{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: 0 50%;
+        }
+        .image__background {
+            height: auto;
+            width: 100%;
+            transform: translateY(0px) scale(1);
+            transform-origin: 0 50%;
+        }
+        .image__middle {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(5px) scale(0.375);
+            transform-origin: 50%;
+        }
+        .image__foreground {
+            transform: translateZ(2px) scale(0.75);
+            transform-origin: top;
+        }
+        .card {
+            background: blue;
+            border-radius: 8px;
+            width: 80px;
+            height: 100px;
+            position: absolute;
+            transform: rotate(-20px);
+        }
+        .one {
+            left: 30%;
+            top: 200px;
+        }
+        .two {
+            right: 20%;
+            top: 400px;
+        }
+        .three {
+            right: 20%;
+            bottom: -700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="image image__background">
+            <img src="https://img.freepik.com/vector-gratis/fondo-colorido-futurista-degradado_23-2149120170.jpg?w=1380&t=st=1719417246~exp=1719417846~hmac=78f5025850df33b89a2490ae70a2475363e7577d5b0bec83f090b5fe74830f71" alt="Enemy">
+        </div>
+
+        <div class="image__middle">
+            <div class="card1"></div>
+            <div class="card2"></div>
+            <div class="card3"></div>
+        </div>
+
+        <div class="image image__foreground">
+            <img src="https://static.wikia.nocookie.net/princeofpersia/images/4/4a/Knight_snes.png/revision/latest/thumbnail/width/360/height/360?cb=20190815005500&path-prefix=en" alt="Fight">
+        </div>
+    </div>
+</body>
+</html>
