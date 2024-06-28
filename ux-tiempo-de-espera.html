@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .nav {
+      display: flex;
+    }
+    .nav li ul {
+      display: block;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 400ms;
+      transition-delay: 300ms;
+    }
+    .nav li:hover > ul {
+      opacity: 1;
+      transition: opacity 400ms;
+      transition-delay: 300ms;
+    }
+    .nav li ul li {
+      position: relative;
+    }
+    .nav li ul li {
+      right: -80px;
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="nav">
+  <li><a href="/">Aerolinea</a>
+  <ul>
+  <li><a href="/">Asiento</a></li>
+  <li><a href="/">Asginado</a></li>
+  <li><a href="/">Hora de Salida</a>
+  <ul>
+  <li><a href="/">Cortos</a></li>
+  <li><a href="/">Largos</a></li>
+  <li><a href="/">Conexion</a></li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  <li><a href="/">Internacional</a></li>
+  <li><a href="/">Salidas</a></li>
+  </ul>
+</body>
+</html>
